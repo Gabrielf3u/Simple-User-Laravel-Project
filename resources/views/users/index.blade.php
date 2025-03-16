@@ -9,8 +9,9 @@
     <ul>
         @foreach($users as $user)
             <li>
-                <p>{{ $user['name'] }}</p>
-                <a href="/users/{{ $user['id'] }}">View Details</a>
+                <x-card href="/users/{{ $user['id'] }}" :highlight="$user['age'] < 20">
+                    <h3>{{ $user['name'] }}</h3>
+                </x-card>
             </li>
         @endforeach
     </ul>

@@ -14,7 +14,7 @@
         <p>{{ $character->origin->description }}</p>
     </div>
 
-    <form action="{{ route('characters.destroy', $character->id) }}" method="POST">
+    <form action="{{ route('characters.destroy', $character) }}" method="POST">
         @csrf
         @method('DELETE')
 

@@ -9,8 +9,8 @@
     <header>
         <nav>
             <h1>Character Network</h1>
-            <a href="/characters">All Characters</a>
-            <a href="/characters/create">Create New Character</a>
+            <a href="{{ route('characters.index') }}">All Characters</a>
+            <a href="{{ route('characters.create') }}">Create New Character</a>
         </nav>
     </header>
 

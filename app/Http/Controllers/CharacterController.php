@@ -39,14 +39,14 @@ class CharacterController extends Controller
         ]);
 
         Character::create($validated);
-        return redirect()->route('characters.index');
+        return redirect()->route('characters.index')->with('success', 'Character Created.');
     }
 
     public function destroy($id) {
         // -> /characters/{id} (DELETE)
         $character = Character::findOrFail($id);
         $character->delete();
-        return redirect()->route('characters.index');
+        return redirect()->route('characters.index')->with('success', 'Character Deleted.');
 
     }
 }

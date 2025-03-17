@@ -6,20 +6,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users', function () {
-    $users = [
+Route::get('/characters', function () {
+    $characters = [
         ["name" => "Gon Freecss", "age" => 14, "id" => "1"],
         ["name" => "Hisoka Morow", "age" => 28, "id" => "2"],
     ];
-    return view('users.index', ["greeting" => "Hxh characters", "users" => $users]);
+    return view('characters.index', ["greeting" => "Hxh characters", "characters" => $characters]);
 });
 
-Route::get('/users/create', function () {
-    return view('users.create');
+Route::get('/characters/create', function () {
+    return view('characters.create');
 });
 
-Route::get('/users/{id}', function ($id) {
+Route::get('/characters/{id}', function ($id) {
 
     // Fetch record with an ID
-    return view('users.show', ["id" => $id]);
+    return view('characters.show', ["id" => $id]);
 });

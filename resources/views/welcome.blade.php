@@ -7,10 +7,10 @@
 </head>
 <body class="text-center px-8 py-12">
     <h1>Welcome to the User Network </h1>
-    <p>Select the following button to view the list of users.</p>
+    <p>Select the following button to view the list of characters.</p>
 
-    <a href="/users" class="btn mt-4 inline-block">
-        Locate Users
+    <a href="/characters" class="btn mt-4 inline-block">
+        Locate Characters
     </a>
 </body>
 </html>

@@ -9,8 +9,8 @@
     <header>
         <nav>
             <h1>User Network</h1>
-            <a href="/users">All Users</a>
-            <a href="/users/create">Create New User</a>
+            <a href="/characters">All Characters</a>
+            <a href="/characters/create">Create New Character</a>
         </nav>
     </header>
 

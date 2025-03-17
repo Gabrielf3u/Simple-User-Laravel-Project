@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Character;
+use App\Models\Origin;
 use Illuminate\Http\Request;
 
 class CharacterController extends Controller
@@ -22,6 +23,9 @@ class CharacterController extends Controller
 
     public function create() {
         // route --> /characters/create
-        return view('characters.create');
+        $origins = Origin::all();
+
+        return view('characters.create', ["origins" => $origins]);
+        
     }
 }

@@ -17,7 +17,9 @@ class CharacterFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name(),
+            'bio' => fake()->realText(50),
+            'age' => fake()->numberBetween(10,50)
         ];
     }
 }

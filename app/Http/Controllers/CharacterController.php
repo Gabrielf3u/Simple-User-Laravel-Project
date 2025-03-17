@@ -28,4 +28,17 @@ class CharacterController extends Controller
         return view('characters.create', ["origins" => $origins]);
         
     }
+
+    public function store(Request $request) {
+        // --> /characters/ (POST)
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'age' => 'required|integer|min:1|max:100',
+            'bio' => 'required|string|min:20|max:1000',
+            'origin_id' => 'required|exists:origins,id',
+        ]);
+
+        Character::create($validated);
+        return redirect()->route('characters.index');
+    }
 }

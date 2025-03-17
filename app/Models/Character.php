@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Character extends Model
 {
-    protected $fillable = ['name', 'age', 'bio'];
+    protected $fillable = ['name', 'age', 'bio', 'origin_id'];
 
     /** @use HasFactory<\Database\Factories\CharacterFactory> */
     use HasFactory;

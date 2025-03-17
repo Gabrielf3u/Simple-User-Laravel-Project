@@ -14,4 +14,10 @@
         <p>{{ $character->origin->description }}</p>
     </div>
 
+    <form action="{{ route('characters.destroy', $character->id) }}" method="POST">
+        @csrf
+        @method('DELETE')
+
+        <button type="submit" class="btn my-4">Delete Character</button>
+    </form>
 </x-layout>

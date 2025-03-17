@@ -11,4 +11,9 @@ class Origin extends Model
     
     /** @use HasFactory<\Database\Factories\OriginFactory> */
     use HasFactory;
+
+    public function characters() {
+        return $this->hasMany(Character::class);
+    }
+
 }

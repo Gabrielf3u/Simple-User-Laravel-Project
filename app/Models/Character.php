@@ -11,4 +11,8 @@ class Character extends Model
 
     /** @use HasFactory<\Database\Factories\CharacterFactory> */
     use HasFactory;
+
+    public function origin() {
+        return $this->belongsTo(Origin::class);
+    }
 }

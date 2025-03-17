@@ -19,7 +19,7 @@ class CharacterFactory extends Factory
         return [
             'name' => fake()->name(),
             'bio' => fake()->realText(50),
-            'age' => fake()->numberBetween(10,50)
+            'age' => fake()->numberBetween(20,60)
         ];
     }
 }

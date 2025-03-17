@@ -9,7 +9,7 @@ class CharacterController extends Controller
 {
     public function index() {
         // Route --> /Characters/
-        $characters = Character::orderBy('created_at','desc')->get();
+        $characters = Character::orderBy('created_at','desc')->paginate(10);
         return view('characters.index', ["characters" => $characters]);
     }
 

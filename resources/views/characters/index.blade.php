@@ -10,4 +10,6 @@
             </li>
         @endforeach
     </ul>
+
+    {{ $characters->links() }}
 </x-layout>
